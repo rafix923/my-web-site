@@ -1,8 +1,9 @@
 import React from 'react'
+import { MenuBar } from './style'
 
 export default function Header() {
   return (
-    <div>
+    <MenuBar>
     <nav>
         <ul>
             <li>Home</li>
@@ -12,7 +13,7 @@ export default function Header() {
             <li>Sobre</li>
         </ul>
     </nav>
-    </div>
+    </MenuBar>
   )
 }
 
