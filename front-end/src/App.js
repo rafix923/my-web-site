@@ -1,13 +1,11 @@
+import React from 'react'
+import Header from './components/Header/Header'
 
-function App() {
-
-  let message = "Hello World!"
-  
+export default function App() {
   return (
     <div>
-  <h1>{message}</h1>
+      <Header/>
     </div>
-  );
+  )
 }
 
-export default App;
