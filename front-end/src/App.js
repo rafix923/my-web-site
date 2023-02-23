@@ -1,13 +1,8 @@
+import React from 'react'
 
-function App() {
-
-  let message = "Hello World!"
-  
+export default function App() {
   return (
-    <div>
-  <h1>{message}</h1>
-    </div>
-  );
+    <div>app</div>
+  )
 }
 
-export default App;
