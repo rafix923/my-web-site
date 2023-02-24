@@ -1,16 +1,25 @@
 import React from 'react'
+import { MenuBar, MenuBarContainer, MenuItem } from './style'
 
-export default function Header() {  
-
+export default function Header() {
     return (
-        <nav>
-        <ul>
-            <li>Home</li>
-            <li>Serviços</li>
-            <li>Portifólio</li>
-            <li>Sobre</li>
-            <li>Contato</li>
-        </ul>
-        </nav>
+        <MenuBarContainer>
+            <MenuBar>
+                <MenuItem>Home</MenuItem>
+                <MenuItem>Serviços</MenuItem>
+                <MenuItem>Portfólio</MenuItem>
+                <MenuItem>Contato</MenuItem>
+                <MenuItem>Sobre</MenuItem>
+            </MenuBar>
+        </MenuBarContainer>
+
     )
 }
+
+
+
+
+
+
+
+
