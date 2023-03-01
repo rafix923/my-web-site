@@ -1,0 +1,17 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "dev": "ts-node-dev ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "RafaelLopes.dev",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.14.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
