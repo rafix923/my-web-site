@@ -1,0 +1,9 @@
+-- Active: 1677699941380@@127.0.0.1@3306@development_webpage
+CREATE TABLE WEBPAGE_USER(
+    id VARCHAR(255) AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(255) UNIQUE NOT NULL,
+    details TEXT,
+    PRIMARY KEY (id)
+)
