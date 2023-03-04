@@ -2,6 +2,9 @@ import { Request, Response } from "express";
 import { UserBusiness } from "../buniness/UserBusiness";
 
 export class UserController {
+    static createUser(arg0: string, createUser: any) {
+        throw new Error("Method not implemented.");
+    }
 
     createUser = async (req: Request, res: Response): Promise<void> => {
         try {

@@ -1,3 +1,6 @@
 import { app } from "./app";
+import { UserController } from "./controller/UserController";
 
-app.post('/create/user')
+const userController = new UserController()
+
+app.post('/create/user', userController.createUser)
