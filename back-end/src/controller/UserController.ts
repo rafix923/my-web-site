@@ -9,10 +9,10 @@ export class UserController {
     createUser = async (req: Request, res: Response): Promise<void> => {
         try {
             const input: any = {
-                name: req.body.nome,
+                name: req.body.name,
                 email: req.body.email,
-                phone: req.body.telefone,
-                details: req.body.detalhes
+                phone: req.body.phone,
+                details: req.body.details
             };
 
             const userBusiness = new UserBusiness()

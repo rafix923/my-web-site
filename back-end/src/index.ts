@@ -3,4 +3,4 @@ import { UserController } from "./controller/UserController";
 
 const userController = new UserController()
 
-app.post('/create/user', userController.createUser)
+app.post('/user/create', userController.createUser)
