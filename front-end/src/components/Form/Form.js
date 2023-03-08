@@ -12,27 +12,31 @@ function Form() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Nome:</label>
+        <form>
+            <label htmlFor='name'>Nome:</label>
             <input
+                id='name'
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
             />
-            <label>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
+                id='email'
                 type="text"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
             />
-            <label>Telefone:</label>
+            <label htmlFor='phone'>Telefone:</label>
             <input
+                id='phone'
                 type="text"
                 value={phone}
                 onChange={e => setPhone(e.target.value)}
             />
-            <label>Detalhes:</label>
+            <label htmlFor='details'>Detalhes:</label>
             <textarea
+                id='details'
                 value={details}
                 onChange={e => setDetails(e.target.value)}
             />
