@@ -1,45 +1,67 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useForm } from '../../hooks/useForm';
 
 function Form() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [details, setDetails] = useState('');
+    // const [form, onChange, resetForm] = useForm({ name: "" })
+    // console.log(form);
+    const [inputName, setInputName] = useState('');
+    const [inputEmail, setInputEmail] = useState('');
+    const [inputPhone, setInputPhone] = useState('');
+    const [inputDetails, setInputDetails] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
 
     };
 
+    const handleInputName = (e) => {
+        setInputName(e.target.value)
+    };
+
+    const handleInputEmail = (e)=>{
+        setInputEmail(e.target.value)
+    };
+
+    const handleInputPhone = (e)=>{
+        setInputPhone(e.target.value)
+    };
+
+   const handleInputDetails = (e)=>{
+        setInputDetails(e.target.value)
+    };
+
+    
+
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <label htmlFor='name'>Nome:</label>
             <input
                 id='name'
+                name='name'
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={inputName}
+                onChange={handleInputName}
             />
             <label htmlFor='email'>Email:</label>
             <input
                 id='email'
                 type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={inputEmail}
+                onChange={handleInputEmail}
             />
             <label htmlFor='phone'>Telefone:</label>
             <input
                 id='phone'
                 type="text"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={inputPhone}
+                onChange={handleInputPhone}
             />
             <label htmlFor='details'>Detalhes:</label>
             <textarea
                 id='details'
-                value={details}
-                onChange={(e) => setDetails(e.target.value)}
+                value={inputDetails}
+                onChange={handleInputDetails}
             />
             <button type="submit">Enviar</button>
         </form>
