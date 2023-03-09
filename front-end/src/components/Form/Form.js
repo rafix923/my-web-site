@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Form() {
     const [name, setName] = useState('');
@@ -6,41 +7,41 @@ function Form() {
     const [phone, setPhone] = useState('');
     const [details, setDetails] = useState('');
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        // Espaço destinado para receber o código que enviará as infomações
-    }
+
+    };
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor='name'>Nome:</label>
             <input
                 id='name'
                 type="text"
                 value={name}
-                onChange={e => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
             />
             <label htmlFor='email'>Email:</label>
             <input
                 id='email'
                 type="text"
                 value={email}
-                onChange={e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor='phone'>Telefone:</label>
             <input
                 id='phone'
                 type="text"
                 value={phone}
-                onChange={e => setPhone(e.target.value)}
+                onChange={(e) => setPhone(e.target.value)}
             />
             <label htmlFor='details'>Detalhes:</label>
             <textarea
                 id='details'
                 value={details}
-                onChange={e => setDetails(e.target.value)}
+                onChange={(e) => setDetails(e.target.value)}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Enviar</button>
         </form>
     );
 }
