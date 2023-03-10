@@ -8,7 +8,7 @@ function Form() {
 
     const createUser = (e) => {
         e.preventDefault()
-        // axios.post('/user/create', body)
+        // axios.post(`${BASE_URL}`/create/user, body)
         console.log(body);
     };
 
