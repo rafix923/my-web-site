@@ -1,44 +1,54 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import { useForm } from '../../hooks/useForm';
+
 
 function Form() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [details, setDetails] = useState('');
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        // Espaço destinado para receber o código que enviará as infomações
-    }
+    const [body, onChange] = useForm({ name: "", email: "", phone: "", details: "" })
+
+    const createUser = (e) => {
+        e.preventDefault()
+        // axios.post(`${BASE_URL}`/create/user, body)
+        console.log(body);
+    };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Nome:</label>
+        <form onSubmit={createUser}>
+            <label htmlFor='name'>Nome:</label>
             <input
+                id='name'
+                name='name'
                 type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
+                value={body.name}
+                onChange={onChange}
             />
-            <label>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
+                id='email'
+                name='email'
                 type="text"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                value={body.email}
+                onChange={onChange}
             />
-            <label>Telefone:</label>
+            <label htmlFor='phone'>Telefone:</label>
             <input
+                id='phone'
+                name='phone'
                 type="text"
-                value={phone}
-                onChange={e => setPhone(e.target.value)}
+                value={body.phone}
+                onChange={onChange}
             />
-            <label>Detalhes:</label>
+            <label htmlFor='details'>Detalhes:</label>
             <textarea
-                value={details}
-                onChange={e => setDetails(e.target.value)}
+                id='details'
+                name='details'
+                type='text'
+                value={body.details}
+                onChange={onChange}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Enviar</button>
         </form>
     );
-}
+};
 
 export default Form;
