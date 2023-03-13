@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useForm } from '../../hooks/useForm';
-
+import {BASE_URL} from '../../constants/constants'
 
 function Form() {
 
@@ -8,7 +8,12 @@ function Form() {
 
     const createUser = (e) => {
         e.preventDefault()
-        // axios.post(`${BASE_URL}`/create/user, body)
+        axios.post(`${BASE_URL}/user/create`, body)
+            .then((response) => {
+                console.log(response.data)
+            }).catch((error) => {
+                console.log('Algo deu errado')
+            });
         console.log(body);
     };
 
