@@ -2,8 +2,8 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-   "name": "Isra",
-   "email": "israel@exemplo.com",
-   "phone": "11 99564-9822",
+   "name": "Rafael",
+   "email": "rafael@exemplo.com",
+   "phone": "62 99564-9822",
    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum ex sed lectus fringilla, id malesuada nulla laoreet. Morbi euismod lacus sed risus cursus sollicitudin. Phasellus porta suscipit sem, quis interdum sapien fermentum sed. Praesent eget consectetur eros. Nam faucibus, augue at faucibus lobortis, tortor lorem bibendum erat, ut consectetur lorem mauris eu leo. Fusce gravida quam nec lectus tincidunt blandit. Sed finibus suscipit elit, vel luctus eros. Nam vel elementum justo. Nulla tristique felis massa, at volutpat magna aliquet a. In euismod nisl in velit volutpat, in malesuada turpis pulvinar. Sed dapibus nibh non est bibendum, non placerat mi luctus."
 }
